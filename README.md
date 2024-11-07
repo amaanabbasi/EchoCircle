@@ -1,6 +1,6 @@
 # Social Media App
 
 ## Contributors
-Yaming 
-Mohammad Amaan
-husain
+- Yaming
+- Mohammad Amaan
+- Husain
