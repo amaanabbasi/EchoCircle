@@ -3,4 +3,4 @@
 ## Contributors
 - Yaming
 - Mohammad Amaan
-- Husain
+- Husain Shaikh
