@@ -29,7 +29,7 @@ _INIT;
   else $loggedin = FALSE;
 
 echo <<<_MAIN
-    <title>Robin's Nest: $userstr</title>
+    <title>EchoCircle: $userstr</title>
   </head>
   <body>
     <div data-role='page'>
