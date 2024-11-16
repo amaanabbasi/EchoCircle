@@ -34,7 +34,7 @@ echo <<<_MAIN
   <body>
     <div data-role='page'>
       <div data-role='header'>
-        <div id='logo' class='center'><img id='robin' src='robin.gif'>EchoCircle</div>
+        <div id='logo' class='center'><img id='robin' src='robin.png' style="width:100px">EchoCircle</div>
         <div class='username'>$userstr</div>
       </div>
       <div data-role='content'>
