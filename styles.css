@@ -1,84 +1,158 @@
-/* Example 13: styles.css */
+/* Modernized Styles with Logo Colors and Button Animation */
+:root {
+  --main-bg: #fffbe8; /* Light cream for background (based on robin’s chest) */
+  --primary-color: #f36c3d; /* Vibrant orange-red from robin’s chest */
+  --secondary-color: #5d9b3d; /* Green inspired by natural foliage */
+  --accent-color: #2d4f7c; /* Dark blue for contrast */
+  --text-color: #333; /* Neutral dark text for readability */
+  --button-hover: #e3572d; /* Slightly darker shade of the primary color */
+}
 
-* {
-  font-family:verdana,sans-serif;
-  font-size  :14pt;
+/* Keyframes for fade-in animation */
+@keyframes fadeInFromOutside {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Start outside the view */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
 }
 
 body {
-  width     :700px;
-  margin    :20px auto;
-  background:#f8f8f8;
-  border    :1px solid #888;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--main-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-html {
-  background:#fff
+h1, h2, h3 {
+  color: var(--primary-color);
+  text-align: center;
 }
 
-img {
-  border            :1px solid black;
-  margin-right      :15px;
-  -moz-box-shadow   :2px 2px 2px #888;
-  -webkit-box-shadow:2px 2px 2px #888;
-  box-shadow        :2px 2px 2px #888;
+button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  animation: fadeInFromOutside 0.8s ease-out; /* Add animation */
 }
 
-.username {
-  text-align :center;
-  background :#eb8;
-  color      :#40d;
-  font-family:helvetica;
-  font-size  :20pt;
-  padding    :4px;
+button:hover {
+  background: var(--button-hover);
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.info {
-  font-style :italic;
-  margin     :40px 0px;
-  text-align :center;
+/* Example of reusable button styles for specific buttons */
+button.primary {
+  animation-delay: 0.3s; /* Slight delay for additional buttons */
 }
 
-.center {
-  text-align:center;
-}
-
-.subhead {
-  font-weight:bold;
-}
-
-.taken, .error {
-  color:red;
-}
-
-.available {
-  color:green;
-}
-
-.whisper {
-  font-style:italic;
-  color     :#006600;
+button.secondary {
+  animation-delay: 0.5s;
 }
 
 #logo {
-  font-family:Georgia;
-  font-weight:bold;
-  font-style :italic;
-  font-size  :97px;
-  color      :red;
-  }
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 80px;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 #robin {
-  position          :relative;
-  border            :0px;
-  margin-left       :-6px;
-  margin-right      :0px;
-  top               :17px;
-	-moz-box-shadow   :0px 0px 0px;
-	-webkit-box-shadow:0px 0px 0px;
-	box-shadow        :0px 0px 0px;
+  position: relative;
+  border: 0px;
+  margin: 10px auto;
+  top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.username {
+  text-align: center;
+  background: var(--secondary-color);
+  color: #fff;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.info {
+  font-style: italic;
+  margin: 30px 0;
+  text-align: center;
+  color: var(--text-color);
+}
+
+img {
+  border: 1px solid var(--primary-color);
+  margin-right: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.taken, .error {
+  color: #e63946; /* Red for errors */
+}
+
+.available {
+  color: #38a169; /* Green for availability */
+}
+
+.whisper {
+  font-style: italic;
+  color: var(--accent-color);
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: var(--main-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  background: var(--main-bg);
 }
 
 #used {
-  margin-top:50px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--text-color);
 }
+
+.subhead {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Parallax Effect */
+/* Parallax Effect */
+.parallax {
+  height: 400px; /* Adjust based on desired visual */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
