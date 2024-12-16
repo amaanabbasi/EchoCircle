@@ -22,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($result->rowCount() > 0) {
             $_SESSION['user'] = $user;
-            header("Location: capture_location.php");
+            $randstr = bin2hex(random_bytes(8));
+            header("Location: members.php?view=$user&r=$randstr");
             exit();
         } else {
             $error = "Invalid username or password.";
