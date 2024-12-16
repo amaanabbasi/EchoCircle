@@ -23,7 +23,7 @@
 
     $result = queryMysql("SELECT * FROM friends
       WHERE user='$add' AND friend='$user'");
-    if (!$result->rowCount)
+    if ($result->rowCount() == 0)
       queryMysql("INSERT INTO friends VALUES ('$add', '$user')");
   }
   elseif (isset($_GET['remove']))
